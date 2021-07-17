@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} {{ contato.name }} {{ contato.last_name }} {% endblock %}
+
+{% block 'content' %}
+
+    <h4 class="text-center mt-5"> Detalhes do contato </h4>
+    <div class="card mt-2">
+        <div class="card-title text-center font-weight-bold">
+            {{ contato.name }} {{ contato.last_name }}
+        </div>
+
+        <div class="card-body">
+
+            <h6>Nome: {{ contato.name }}</h6>
+            <h6>Sobrenome: {{ contato.last_name }}</h6>
+            <h6>Telefone: {{ contato.phone }}</h6>
+            <h6>Email: {{ contato.email }}</h6>
+            <h6>Descrição: {{ contato.description }}</h6>
+            <h6>Categoria: {{ contato.category }}</h6>
+
+            <div class="mt-3">
+                <a href="" class="btn btn-info">Editar</a>
+                <a href="" class="btn btn-danger">Deletar</a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
